@@ -1,0 +1,1 @@
+# next-dynamic-route-generator
