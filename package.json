@@ -1,0 +1,46 @@
+{
+  "name": "@hisho/next-dynamic-route-generator",
+  "version": "0.0.1",
+  "types": "dist/index.d.ts",
+  "bin": "bin/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "npm run build && ts-node ./debug/index.ts",
+    "format": "prettier --check . --write",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisho/next-dynamic-route-generator.git"
+  },
+  "keywords": [],
+  "author": "hisho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hisho/next-dynamic-route-generator/issues"
+  },
+  "homepage": "https://github.com/hisho/next-dynamic-route-generator#readme",
+  "volta": {
+    "node": "16.16.0",
+    "yarn": "1.22.19"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^1.0.1",
+    "@types/glob": "^7.2.0",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.0.6",
+    "@types/prettier": "^2.6.3",
+    "child_process": "^1.0.2",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "glob": "^8.0.3",
+    "minimist": "^1.2.6"
+  }
+}
