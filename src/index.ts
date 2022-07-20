@@ -160,9 +160,7 @@ export const main = async (args: string[]) => {
   if (argv.watch !== undefined) {
     chokidar
       .watch(
-        [`**/!(_)*.+(${pageExtensions.join('|')})`].map((n) =>
-          path.join(config.src, n)
-        ),
+        pageExtensions.map((n) => path.join(config.src, `**/!(_)*.${n}`)),
         {
           ignoreInitial: true,
         }
