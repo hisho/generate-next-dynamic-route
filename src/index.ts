@@ -148,14 +148,12 @@ export const main = async (args: string[]) => {
     string: ['watch'],
     alias: { w: 'watch' },
   })
-  console.log(argv)
 
   const pageExtensions = (await getNextConfig()) ?? ['tsx', 'ts']
   const pagePaths = getPagePaths({ src: config.src, pageExtensions })
   const slugs = getSlugsFromPagePaths(pagePaths)
   const dynamicRoutes = extractDynamicRoutes(slugs)
   const dynamicRouteObject = objectFromDynamicRoutes(dynamicRoutes)
-  console.log(dynamicRouteObject)
 
   if (argv.watch !== undefined) {
     chokidar
