@@ -1,22 +1,20 @@
-# image-optimizer
+# generate-next-dynamic-route
 
-sharp を使って画像圧縮する cli
+next.jsのdynamic routeを生成するためのcli
 
 ## Install
 
 ```shell
-$ npm i -D @hisho/image-optimizer
+$ npm i -D @hisho/generate-next-dynamic-route
 # or
-$ yarn add -D @hisho/image-optimizer
+$ yarn add -D @hisho/generate-next-dynamic-route
 ```
 
 ## Feature
 
-1. `src/iamges/**/*\.(png|jpg)`を`public/images/**/*\.(png|jpg)`に圧縮しコピーする
-2. `src/iamges/**/*\.(png|jpg)`を`public/images/**/*\.(png|jpg).webp`に変換し出力する
-3. `src/iamges/**/*\.(png|jpg)`を`[640, 828, 1080, 1200, 1920]`の大きさにリサイズする
-4. `src/lib/images.ts`画像の`pathをマッピングしたファイル`を出力する
-5. `-w`または`--watch`をつけるとファイルを監視する
+1. dynamic routeを生成する
+2. next.config.jsを自動で読み込む
+3. `-w`または`--watch`をつけるとファイルを監視する
 
 ## Usage
 
@@ -25,8 +23,8 @@ package.json の scripts に以下を追加する
 ```json
 {
   "scripts": {
-    "watch:image": "./node_modules/@hisho/image-optimizer/bin/index.js --watch",
-    "build:image": "./node_modules/@hisho/image-optimizer/bin/index.js"
+    "watch:image": "./node_modules/@hisho/generate-next-dynamic-route/bin/index.js --watch",
+    "build:image": "./node_modules/@hisho/generate-next-dynamic-route/bin/index.js"
   }
 }
 ```
@@ -34,8 +32,4 @@ package.json の scripts に以下を追加する
 ## TODO
 
 - オプションを受け取れるようにする
-- マッピングファイルの出力の有無を指定できるようにする
-- 画像の圧縮率を変更できるようにする
-- 画像のリサイズを変更できるようにする
-- 出力と入力を自由に設定できるようにする
-- `scripts`の指定の方法を`@hisho/image-optimizer --watch`でできるようにする
+- `scripts`の指定の方法を`generate-next-dynamic-route --watch`でできるようにする
