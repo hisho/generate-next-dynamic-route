@@ -1,6 +1,6 @@
 # generate-next-dynamic-route
 
-next.jsのdynamic routeを生成するためのcli
+next.js の dynamic route を生成するための cli
 
 ## Install
 
@@ -12,8 +12,8 @@ $ yarn add -D @hisho/generate-next-dynamic-route
 
 ## Feature
 
-1. dynamic routeを生成する
-2. next.config.jsを自動で読み込む
+1. dynamic route を生成する
+2. next.config.js を自動で読み込む
 3. `-w`または`--watch`をつけるとファイルを監視する
 
 ## Usage
