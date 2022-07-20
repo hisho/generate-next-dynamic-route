@@ -1,6 +1,6 @@
 {
   "name": "@hisho/generate-next-dynamic-route",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "types": "dist/index.d.ts",
   "bin": {
     "generate-next-dynamic-route": "bin/index.js"

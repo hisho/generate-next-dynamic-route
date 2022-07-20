@@ -143,6 +143,14 @@ export type DynamicPaths = typeof dynamicPaths`,
   )
 }
 
+const write = (pageExtensions: string[]) => {
+  const pagePaths = getPagePaths({ src: config.src, pageExtensions })
+  const slugs = getSlugsFromPagePaths(pagePaths)
+  const dynamicRoutes = extractDynamicRoutes(slugs)
+  const dynamicRouteObject = objectFromDynamicRoutes(dynamicRoutes)
+  writeDynamicPaths(dynamicRouteObject, { dest: config.dest })
+}
+
 export const main = async (args: string[]) => {
   const argv = minimist<argvType>(args, {
     string: ['watch'],
@@ -150,10 +158,6 @@ export const main = async (args: string[]) => {
   })
 
   const pageExtensions = (await getNextConfig()) ?? ['tsx', 'ts']
-  const pagePaths = getPagePaths({ src: config.src, pageExtensions })
-  const slugs = getSlugsFromPagePaths(pagePaths)
-  const dynamicRoutes = extractDynamicRoutes(slugs)
-  const dynamicRouteObject = objectFromDynamicRoutes(dynamicRoutes)
 
   if (argv.watch !== undefined) {
     chokidar
@@ -165,10 +169,10 @@ export const main = async (args: string[]) => {
       )
       .on('all', (eventName, path) => {
         console.log('Watching...', eventName, path)
-        writeDynamicPaths(dynamicRouteObject, { dest: config.dest })
+        write(pageExtensions)
       })
   } else {
     console.log('Building...')
-    writeDynamicPaths(dynamicRouteObject, { dest: config.dest })
+    write(pageExtensions)
   }
 }
