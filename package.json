@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hisho/next-dynamic-route-generator.git"
+    "url": "git+https://github.com/hisho/generate-next-dynamic-route.git"
   },
   "keywords": [],
   "author": "hisho",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hisho/next-dynamic-route-generator/issues"
+    "url": "https://github.com/hisho/generate-next-dynamic-route/issues"
   },
-  "homepage": "https://github.com/hisho/next-dynamic-route-generator#readme",
+  "homepage": "https://github.com/hisho/generate-next-dynamic-route#readme",
   "volta": {
     "node": "16.16.0",
     "yarn": "1.22.19"
