@@ -23,8 +23,8 @@ package.json の scripts に以下を追加する
 ```json
 {
   "scripts": {
-    "watch:image": "./node_modules/@hisho/generate-next-dynamic-route/bin/index.js --watch",
-    "build:image": "./node_modules/@hisho/generate-next-dynamic-route/bin/index.js"
+    "watch:image": "generate-next-dynamic-route --watch",
+    "build:image": "generate-next-dynamic-route"
   }
 }
 ```
@@ -32,4 +32,5 @@ package.json の scripts に以下を追加する
 ## TODO
 
 - オプションを受け取れるようにする
-- `scripts`の指定の方法を`generate-next-dynamic-route --watch`でできるようにする
+- `src`を指定できるようにする
+- `out`を指定できるようにする
